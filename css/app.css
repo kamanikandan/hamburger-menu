@@ -1,0 +1,72 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	box-sizing: border-box;
+}
+
+.menu-trigger {
+	position: absolute;
+	right: -40px;
+	top: 0;
+	z-index: 10;
+	cursor: pointer;
+	background: #000;
+	width: 45px;
+}
+.menu-trigger span {
+	display: block;
+	width: 25px;
+	margin: 5px 10px;
+	height: 2px;
+	margin-bottom: 8px;
+	background: #fff;
+	transition: all ease-in 0.3s;
+}
+.triggerOpened span:nth-child(2) {
+	opacity: 0;
+	transition: all ease-in 0.3s;
+}
+.triggerOpened span:first-child {
+	transform: rotate(45deg) translate(12px, 4px);
+	transition: all ease-in 0.3s;
+}
+.triggerOpened span:last-child {
+	transform: rotate(-45deg) translate(10px, -3px);
+	transition: all ease-in 0.3s;
+}
+
+.menu {
+	position: fixed;
+	left: -200px;
+	top: 0;
+	padding-top: 30px;
+	width: 200px;
+	height: 100vh;
+	background: #000;
+	transition: all ease-in 0.3s;
+}
+.menuOpen {
+	left: 0;
+	transition: all ease-in 0.3s;
+}
+.menu li {
+	padding: 5px 0;
+	font-size: 13px;
+	font-weight: normal;
+}
+.menu li a {
+	display: block;
+	text-decoration: none;
+	color: #eee;
+	padding: 15px;
+	border-left: 10px solid transparent;
+	transition: all ease-in 0.3s;
+}
+
+.menu li a:hover,
+.menu li a.active {
+	background: #111;
+	border-left: 10px solid #888;
+	transition: all ease-in 0.3s;
+}
